@@ -1,2 +1,16 @@
 language: csharp
+
+# whitelist
+branches:
+  only:
+    - develop
 solution: ./TestLinkAutomation.Common/TestLinkAutomation.Common.sln
+before_install:
+- git clone --branch=develop https://github.com/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer.git /home/travis/build/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer
+install:
+  - nuget restore ./TestLinkAutomation.Common/TestLinkAutomation.Common.sln
+  - nuget install NUnit.Runners -Version 3.2.1.0 -OutputDirectory testrunner
+   
+script:
+  - xbuild /p:Configuration=Release ./TestLinkAutomation.SVN.LogAnalyzer/TestLinkAutomation.SVN.LogAnalyzer.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe ./TestLinkAutomation.SVN.LogAnalyzer.Test/bin/Release/TestLinkAutomation.SVN.LogAnalyzer.Test.dll
