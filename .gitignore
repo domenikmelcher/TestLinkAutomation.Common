@@ -2,3 +2,5 @@ TestLinkAutomation.Common/TestLinkAutomation.Common/bin/Debug/Plossum CommandLin
 TestLinkAutomation.Common/TestLinkAutomation.Common/bin/Debug/TestLinkAutomation.Common.dll
 *.txt
 TestLinkAutomation.Common/TestLinkAutomation.Common/obj/Debug/TestLinkAutomation.Common.dll
+TestLinkAutomation.Common/TestLinkAutomation.Common/bin/
+TestLinkAutomation.Common/TestLinkAutomation.Common/obj/
