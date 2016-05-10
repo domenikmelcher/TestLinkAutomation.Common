@@ -12,5 +12,5 @@ install:
   - nuget install NUnit.Runners -Version 3.2.1.0 -OutputDirectory testrunner
    
 script:
-  - xbuild /p:Configuration=Release /home/travis/build/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer/TestLinkAutomation.SVN.LogAnalyzer.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe /home/travis/build/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer.Test/bin/Release/TestLinkAutomation.SVN.LogAnalyzer.Test.dll
+  - xbuild /p:Configuration=Release /home/travis/build/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer/TestLinkAutomation.SVN.LogAnalyzer/TestLinkAutomation.SVN.LogAnalyzer.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.1/tools/nunit3-console.exe /home/travis/build/domenikmelcher/TestLinkAutomation.SVN.LogAnalyzer/TestLinkAutomation.SVN.LogAnalyzer.Test/bin/Release/TestLinkAutomation.SVN.LogAnalyzer.Test.dll
